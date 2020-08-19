@@ -1766,15 +1766,19 @@ def Show_DB(curs,query:str):
     col = []
     curs.execute(query)
     
+
     for col_object in curs.description:
         col.append(col_object[0])
     
+
     t = PrettyTable(col)
     resultList = []
     
+
     for row in curs.fetchall():
         t.add_row(row)
         resultList.append(row)
+    
     
     print(t)
     return resultList
