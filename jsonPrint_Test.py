@@ -26,6 +26,7 @@ def Show_DB(re_data):
         return resultList
     else:
         col = ["No Result"]
+        t = PrettyTable(col)
         print(t)
         return []
 
@@ -174,7 +175,8 @@ data = [{
 #     table_data.append(list(d.values()))
 
 # print(table_data)
-
-
+samList = []
+sample = dict(samList)
+print(sample)
 Show_DB(data)
-Show_DB({[]})
+Show_DB(sample)
